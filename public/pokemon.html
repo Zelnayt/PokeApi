@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/info.css">
-    <link rel="stylesheet" href="css/icons.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/info.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+  </head>
+  <body>
+    
+    <!-- Navigation buttons -->
     <div id="buttons"></div>
+
+    <!-- Full information -->
     <div id="info-container">
-        <div id="info-pokemon">
-            <div id="info-flex">
-                <div id="info-name"></div>
-                <div id="info-number"></div>
-            </div>
-            
-            <div id="info-image"></div>
+
+    <!-- Name, number, image -->
+      <div id="info-pokemon">
+        <div id="info-flex">
+          <div id="info-name"></div>
+          <div id="info-number"></div>
         </div>
 
-        <div id="info-part2">
-            <div id="info-types">
-                <div id="info-type1"></div>
-                <div id="info-type2"></div>
-            </div>
-            <div id="info-stats">
-                <div id="info-hp"></div>
-                <div id="info-attack"></div>
-                <div id="info-defense"></div>
-                <div id="info-sp-attack"></div>
-                <div id="info-sp-defense"></div>
-                <div id="info-speed"></div>
-            </div>
+        <div id="info-image"></div>
+      </div>
+
+      <!-- Types, stats -->
+      <div id="info-part2">
+        <div id="info-types">
+          <div id="info-type1"></div>
+          <div id="info-type2"></div>
+        </div>
+        <div id="info-stats">
+          <div id="info-hp"></div>
+          <div id="info-attack"></div>
+          <div id="info-defense"></div>
+          <div id="info-sp-attack"></div>
+          <div id="info-sp-defense"></div>
+          <div id="info-speed"></div>
+        </div>
+      </div>
+
+      <div>
+
+        <!-- Evolution chain -->
+        <div id="info-evocard">
+          <div id="info-evotxt">Evolution chain</div>
+          <div id="info-evolution">
+            <div id="info-evolution1"></div>
+            <div id="info-evolution2"></div>
+            <div id="info-evolution3"></div>
+          </div>
         </div>
 
-            <div>
-                <div id="info-evocard">
-                    <div id="info-evotxt">Evolution chain</div>
-                    <div id="info-evolution">
-                    <div id="info-evolution1"></div>
-                    <div id="info-evolution2"></div>
-                    <div id="info-evolution3"></div>
-                    </div>
-                </div>
-                <div id="info-align">
-                    <span id="info-abilitiestxt">Abilities</span>
-                    <div id="info-abilities"></div>
-                </div>
-                <div id="info-cry"></div>
-            </div>
+        <!-- Abilities -->
+        <div id="info-align">
+          <span id="info-abilitiestxt">Abilities</span>
+          <div id="info-abilities"></div>
+        </div>
 
-        
+        <!-- Cry -->
+        <div id="info-cry"></div>
+      </div>
     </div>
 
     <script src="js/more_info.js"></script>
-</body>
+  </body>
 </html>

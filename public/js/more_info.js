@@ -29,7 +29,7 @@ function showPokemon(data)
 {
 // get the image
 const image = document.getElementById("info-image");
-image.innerHTML = `<button id="info-shiny"><p>Shiny</p></button>
+image.innerHTML = `<button id="info-shiny" onclick="toggleShiny()"><p>Normal</p></button>
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data.id}.png" alt="${data.name}">`;
 
 // get the number
@@ -187,4 +187,26 @@ function updateUrl() {
     let url = new URL(window.location);
     url.searchParams.set("pokemon", pokemonId);
     window.history.replaceState(null, null, url);
+}
+
+var shiny = false;
+function toggleShiny() {
+  // get the id
+  const id = document.getElementById("info-number").innerHTML;
+  // remove the # from the id
+  const idNumber = id.substring(1);
+
+  if (shiny == false) {
+    shiny = true;
+    console.log("normal");
+    const image = document.getElementById("info-image");
+    image.innerHTML = `<button id="info-shiny" onclick="toggleShiny()"><p>Shiny</p></button>
+                      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${idNumber}.png" alt="${idNumber}">`;
+  } else {
+    shiny = false;
+  console.log("shiny");
+  const image = document.getElementById("info-image");
+  image.innerHTML = `<button id="info-shiny" onclick="toggleShiny()"><p>Normal</p></button>
+                      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${idNumber}.png" alt="${idNumber}">`;
+  }
 }

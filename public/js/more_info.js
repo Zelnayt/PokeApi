@@ -22,7 +22,7 @@ function fetchData() {
 		});
 }
 
-// Her we add buttons to got to the next and previous pokemon
+// Here we add buttons to go to the next and previous pokemon
 function addButtons() {
 	const pokemonContainer = document.getElementById("buttons");
 	pokemonContainer.innerHTML = `

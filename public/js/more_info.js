@@ -12,13 +12,13 @@ function fetchData() {
 			console.log(data);
       
 			addButtons();
-      updateUrl();
-      showPokemon(data);
-      getType(data);
-      getStats(data);
-      getEvolutions(data);
-      getAbilities(data);
-      getCry(data);
+			updateUrl();
+			showPokemon(data);
+			getType(data);
+			getStats(data);
+			getEvolutions(data);
+			getAbilities(data);
+			getCry(data);
 		});
 }
 

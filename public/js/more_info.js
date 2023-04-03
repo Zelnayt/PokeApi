@@ -2,6 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const pokemonNumber = urlParams.get("pokemon");
 let pokemonId = parseInt(pokemonNumber);
+var shiny = false;
 fetchData();
 
 // Then we fetch and call all the functions needed to show the information
@@ -10,6 +11,7 @@ function fetchData() {
 		.then((response) => response.json())
 		.then((data) => {
 			console.log(data);
+			shiny = false;
       
 			addButtons();
 			updateUrl();
@@ -65,7 +67,6 @@ function showPokemon(data) {
 }
 
 // This Function makes it so the user can toggle between the normal sprite and the shiny sprite
-var shiny = false;
 function toggleShiny() {
 	const id = document.getElementById("info-number").innerHTML;
 	const idNumber = id.substring(1);

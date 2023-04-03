@@ -29,6 +29,7 @@ function addButtons() {
 	const pokemonContainer = document.getElementById("buttons");
 	pokemonContainer.innerHTML = `
         <button id="previous" onclick="navigatePkmnMin()" ${pokemonId === 1 ? 'disabled' : ''}><p>Previous</p></button>
+		<button id="home" onclick="history.back();"><p>Home</p></button>
         <button id="next" onclick="navigatePkmnPlus()"><p>Next</p></button>
     `;
 }
